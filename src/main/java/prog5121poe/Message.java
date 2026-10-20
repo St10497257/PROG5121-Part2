@@ -73,3 +73,6 @@ public String sentMessage(String choice) {
             return "Invalid option.";
     }
 
+public static int returnTotalMessages() {
+    return messageCounter;
+}
