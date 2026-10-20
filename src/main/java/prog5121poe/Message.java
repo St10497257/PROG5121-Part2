@@ -18,3 +18,8 @@ public class Message {
         return recipient;
     }
 }
+
+public boolean checkMessageLength() {
+    return messageText != null
+            && messageText.length() <= 50;
+}
