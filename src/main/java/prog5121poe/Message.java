@@ -36,4 +36,24 @@ public String getMessageID()
 public boolean checkMessageLength() {
     return messageText != null
             && messageText.length() <= 250;
+} 
+
+public String createMessageHash() {
+    if (messageText == null || messageText.trim().isEmpty()) {
+        return "";
+    }
+
+    String[] words = messageText.trim().split("\\s+");
+
+    String firstWord = words[0];
+    String lastWord = words[words.length - 1];
+
+    return (messageID.substring(0, 2)
+            + ":" + messageNumber
+            + ":" + firstWord + lastWord).toUpperCase();
 }
+
+public String getMessageHash() {
+    return messageHash;
+}
+
