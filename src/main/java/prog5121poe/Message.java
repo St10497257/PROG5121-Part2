@@ -60,4 +60,16 @@ public boolean checkRecipientCell() {
     return recipient != null
             && recipient.matches("\\+27\\d{9}");
 }
+    
+public String sentMessage(String choice) {
+    switch (choice.toLowerCase()) {
+        case "send":
+            return "Message successfully sent.";
+        case "store":
+            return "Message successfully stored.";
+        case "discard":
+            return "Press 0 to delete message.";
+        default:
+            return "Invalid option.";
+    }
 
