@@ -55,5 +55,9 @@ public String createMessageHash() {
 
 public String getMessageHash() {
     return messageHash;
+
+public boolean checkRecipientCell() {
+    return recipient != null
+            && recipient.matches("\\+27\\d{9}");
 }
 
